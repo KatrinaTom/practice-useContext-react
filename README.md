@@ -18,9 +18,11 @@ Difference in ClassContextComponents and FunctionComponents
 <img src="images/dark.png" width=500>
 
 ClassContextComponents
+
 <img src="images/ClassComponents.png" width=500>
 
 FunctionContextComponents
+
 <img src="images/FunctionContext.png" width=500>
 
 ---
