@@ -11,9 +11,17 @@ Link to Article: https://blog.webdevsimplified.com/2020-06/use-context/
 
 ## Images
 
+Difference in ClassContextComponents and FunctionComponents
+
 <img src="images/light.png" width=500>
 
 <img src="images/dark.png" width=500>
+
+ClassContextComponents
+<img src="images/ClassComponents.png" width=500>
+
+FunctionContextComponents
+<img src="images/FunctionContext.png" width=500>
 
 ---
 
