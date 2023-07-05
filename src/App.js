@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import FunctionContextComponent from './FunctionContextComponent';
+import ClassContextComponent from './ClassContextComponent';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// use this component in the rest of the application
+export const ThemeContext = React.createContext();
+
+export default function App() {
+    // Single state set up toggle true false for dark theme
+    const [darkTheme, setDarkTheme] = useState(true)
+
+    // function to toggle the theme 
+    function toggleTheme() {
+        setDarkTheme(prevDarkTheme => !prevDarkTheme)
+    }
+
+    // two sections, context Provider wrap all your code that needs access to the variable prop (darkTheme)
+    return (
+        <>
+            <ThemeContext.Provider value={darkTheme}>
+                <button onClick={toggleTheme}>Toggle Theme</button>
+                <FunctionContextComponent />
+                <ClassContextComponent />
+            </ThemeContext.Provider>
+        </>
+    )
 }
-
-export default App;
